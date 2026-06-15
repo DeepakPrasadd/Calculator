@@ -1,62 +1,55 @@
 let result = document.querySelector("#result");
 
-let one = document.querySelector("#one");
-let two = document.querySelector("#two");
-let three = document.querySelector("#three");
-let four = document.querySelector("#four");
-let five = document.querySelector("#five");
-let six = document.querySelector("#six");
-let seven = document.querySelector("#seven");
-let eight = document.querySelector("#eight");
-let nine = document.querySelector("#nine");
-let zero = document.querySelector("#zero");
+let numbersClass = document.querySelector(".numbers");
+let operatorClass = document.querySelector(".operators");
 
-let plus = document.querySelector("#plus");
-let minus = document.querySelector("#minus");
-let multiply = document.querySelector("#multiply");
-let divide = document.querySelector("#divide");
 let equal = document.querySelector("#equal");
+let clear = document.querySelector("#clear");
 
-function TargetHandler(name){
-    name.addEventListener("click",(event)=>{result.value += event.target.textContent; console.log(event)})
+function TargetHandler(name) {
+  name.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+      result.value += event.target.textContent;
+    }
+  });
 }
 
-function OperatorHandler(name){
-    name.addEventListener("click",(event)=>{result.value += event.target.textContent; console.log(event)})
-}
+TargetHandler(numbersClass);
+TargetHandler(operatorClass);
 
-TargetHandler(one);
-TargetHandler(two);
-TargetHandler(three);
-TargetHandler(four);
-TargetHandler(five);
-TargetHandler(six);
-TargetHandler(seven);
-TargetHandler(eight);
-TargetHandler(nine);
-TargetHandler(zero);
+clear.addEventListener("click", () => {
+  result.value = "";
+});
 
-OperatorHandler(plus);
-OperatorHandler(minus);
-OperatorHandler(multiply);
-OperatorHandler(divide);
-// OperatorHandler(equal);
-
-
-
-// switch(document.querySelector("#one")){
-//     case "one":
-//         TargetHandler("one");
-//         break;
-//             case "two":
-//         TargetHandler(two);
-//         break;
-//             case "three":
-//         TargetHandler(three);
-//         break;
-// }
-
-
-// one.addEventListener("click",(event)=>{console.log(result.value = event.target.textContent)})
-
-
+equal.addEventListener("click", () => {
+  let numbers;
+  if (result.value.includes("+")) {
+    numbers = result.value.split("+");
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      sum += Number(numbers[i]);
+      result.value = String(sum);
+    }
+  } else if (result.value.includes("-")) {
+    numbers = result.value.split("-");
+    let subtract = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+      subtract -= Number(numbers[i]);
+      result.value = String(subtract);
+    }
+  } else if (result.value.includes("*")) {
+    numbers = result.value.split("*");
+    let multiply = 1;
+    for (let i = 0; i < numbers.length; i++) {
+      multiply *= Number(numbers[i]);
+      result.value = String(multiply);
+    }
+  } else if (result.value.includes("/")) {
+    numbers = result.value.split("/");
+    let divide = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+      divide /= Number(numbers[i]);
+      result.value = String(divide);
+    }
+  }
+});
