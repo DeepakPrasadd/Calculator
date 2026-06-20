@@ -1,14 +1,14 @@
-let result = document.querySelector("#result");
+let result = document.querySelector('#result');
 
-let numbersClass = document.querySelector(".numbers");
-let operatorClass = document.querySelector(".operators");
+let numbersClass = document.querySelector('.numbers');
+let operatorClass = document.querySelector('.operators');
 
-let equal = document.querySelector("#equal");
-let clear = document.querySelector("#clear");
+let equal = document.querySelector('#equal');
+let clear = document.querySelector('#clear');
 
 function TargetHandler(name) {
-  name.addEventListener("click", (event) => {
-    if (event.target.tagName === "BUTTON") {
+  name.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
       result.value += event.target.textContent;
     }
   });
@@ -37,6 +37,7 @@ function multiplyHandler(numbers) {
     result.value = String(multiply);
   }
 }
+
 function divideHandler(numbers) {
   let divide = numbers[0];
   for (let i = 1; i < numbers.length; i++) {
@@ -48,32 +49,32 @@ function divideHandler(numbers) {
 TargetHandler(numbersClass);
 TargetHandler(operatorClass);
 
-clear.addEventListener("click", () => {
-  result.value = "";
+clear.addEventListener('click', () => {
+  result.value = '';
 });
 
-equal.addEventListener("click", () => {
+equal.addEventListener('click', () => {
   let numbers;
 
   for (let i = 0; i < result.value.length; i++) {
-    if (result.value[i] == "+") {
-      numbers = result.value.split("+");
+    if (result.value[i] == '+') {
+      numbers = result.value.split('+');
       for (let i = 0; i < numbers.length; i++) {
         console.log(numbers, numbers[i]);
-        if (numbers[i].includes("-")) {
-          let splitedObj = numbers[i].split("-");
+        if (numbers[i].includes('-')) {
+          let splitedObj = numbers[i].split('-');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           sumHandler(numbers);
           subtractHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("*")) {
-          let splitedObj = numbers[i].split("*");
+        } else if (numbers[i].includes('*')) {
+          let splitedObj = numbers[i].split('*');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           sumHandler(numbers);
           multiplyHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("/")) {
-          let splitedObj = numbers[i].split("/");
+        } else if (numbers[i].includes('/')) {
+          let splitedObj = numbers[i].split('/');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           sumHandler(numbers);
@@ -82,24 +83,24 @@ equal.addEventListener("click", () => {
           sumHandler(numbers);
         }
       }
-    } else if (result.value[i] == "-") {
-      numbers = result.value.split("-");
+    } else if (result.value[i] == '-') {
+      numbers = result.value.split('-');
       for (let i = 0; i < numbers.length; i++) {
         console.log(numbers, numbers[i]);
-        if (numbers[i].includes("+")) {
-          let splitedObj = numbers[i].split("+");
+        if (numbers[i].includes('+')) {
+          let splitedObj = numbers[i].split('+');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           subtractHandler(numbers);
           sumHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("*")) {
-          let splitedObj = numbers[i].split("*");
+        } else if (numbers[i].includes('*')) {
+          let splitedObj = numbers[i].split('*');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           subtractHandler(numbers);
           multiplyHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("/")) {
-          let splitedObj = numbers[i].split("/");
+        } else if (numbers[i].includes('/')) {
+          let splitedObj = numbers[i].split('/');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           subtractHandler(numbers);
@@ -108,24 +109,24 @@ equal.addEventListener("click", () => {
           subtractHandler(numbers);
         }
       }
-    } else if (result.value[i] == "*") {
-      numbers = result.value.split("*");
+    } else if (result.value[i] == '*') {
+      numbers = result.value.split('*');
       for (let i = 0; i < numbers.length; i++) {
         console.log(numbers, numbers[i]);
-        if (numbers[i].includes("+")) {
-          let splitedObj = numbers[i].split("+");
+        if (numbers[i].includes('+')) {
+          let splitedObj = numbers[i].split('+');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           multiplyHandler(numbers);
           sumHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("-")) {
-          let splitedObj = numbers[i].split("-");
+        } else if (numbers[i].includes('-')) {
+          let splitedObj = numbers[i].split('-');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           multiplyHandler(numbers);
           subtractHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("/")) {
-          let splitedObj = numbers[i].split("/");
+        } else if (numbers[i].includes('/')) {
+          let splitedObj = numbers[i].split('/');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           multiplyHandler(numbers);
@@ -134,24 +135,24 @@ equal.addEventListener("click", () => {
           multiplyHandler(numbers);
         }
       }
-    } else if (result.value[i] == "/") {
-      numbers = result.value.split("/");
+    } else if (result.value[i] == '/') {
+      numbers = result.value.split('/');
       for (let i = 0; i < numbers.length; i++) {
         console.log(numbers, numbers[i]);
-        if (numbers[i].includes("+")) {
-          let splitedObj = numbers[i].split("+");
+        if (numbers[i].includes('+')) {
+          let splitedObj = numbers[i].split('+');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           divideHandler(numbers);
           sumHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("-")) {
-          let splitedObj = numbers[i].split("-");
+        } else if (numbers[i].includes('-')) {
+          let splitedObj = numbers[i].split('-');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           divideHandler(numbers);
           subtractHandler(Object.assign([result.value, ...splitedObj]));
-        } else if (numbers[i].includes("*")) {
-          let splitedObj = numbers[i].split("*");
+        } else if (numbers[i].includes('*')) {
+          let splitedObj = numbers[i].split('*');
           numbers[i] = splitedObj[0];
           splitedObj.shift();
           divideHandler(numbers);

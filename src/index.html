@@ -6,120 +6,43 @@
     <link href="output.css" rel="stylesheet" />
     <title>Document</title>
   </head>
-  <body
-    class="bg-slate-800 text-white w-full h-screen flex justify-center items-center text-3xl"
-  >
+  <body class="bg-slate-800 w-full h-screen flex justify-center items-center text-3xl">
     <div
-      class="border rounded-2xl w-1/4 h-2/3 flex flex-row flex-wrap justify-center items-center gap-2 bg-gray-600 shadow-2xl"
+      class="border w-85  h-100 flex justify-center items-center flex-row flex-wrap gap-2 rounded-2xl bg-gray-600 shadow-2xl"
     >
       <input
         type="text"
         name="result"
         id="result"
         readonly
-        class="bg-gray-200 text-black w-xs h-1/5 rounded-2xl outline-0 p-5 gap-2"
+        class="bg-gray-200 text-black w-75 h-20 rounded-2xl outline-0 p-5 gap-2"
       />
-      <div class="numbers flex flex-row flex-wrap justify-center gap-2 w-2/3">
-        <button
-          id="one"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          1
-        </button>
-        <button
-          id="two"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          2
-        </button>
-        <button
-          id="three"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          3
-        </button>
-        <button
-          id="four"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          4
-        </button>
-        <button
-          id="five"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          5
-        </button>
-        <button
-          id="six"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          6
-        </button>
-        <button
-          id="seven"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          7
-        </button>
-        <button
-          id="eight"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          8
-        </button>
-        <button
-          id="nine"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          9
-        </button>
-        <button
-          id="zero"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          0
-        </button>
+      <div class="numbers flex flex-row flex-wrap justify-center gap-2 w-50">
+        <button id="one" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">1</button>
+        <button id="two" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">2</button>
+        <button id="three" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">3</button>
+        <button id="four" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">4</button>
+        <button id="five" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">5</button>
+        <button id="six" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">6</button>
+        <button id="seven" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">7</button>
+        <button id="eight" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">8</button>
+        <button id="nine" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">9</button>
+        <button id="zero" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">0</button>
+        <button id="doubleZero" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">00</button>
+        <button id="point" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">.</button>
       </div>
 
       <div class="operators flex flex-col gap-2">
-        <button
-          id="plus"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          +
-        </button>
-        <button
-          id="minus"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          -
-        </button>
-        <button
-          id="multiply"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          *
-        </button>
-        <button
-          id="divide"
-          class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl"
-        >
-          /
-        </button>
+        <button id="plus" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">+</button>
+        <button id="minus" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">-</button>
+        <button id="multiply" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">*</button>
+        <button id="divide" class="border rounded-xl w-15 bg-gray-100 text-black shadow-2xl">/</button>
       </div>
       <div class="flex flex-row gap-2">
-        <button
-          id="equal"
-          class="border rounded-xl w-40 bg-amber-500 text-black"
-        >
-          =
-        </button>
-        <button id="clear" class="border rounded-xl w-40 bg-red-400 text-black">
-          Cl
-        </button>
+        <button id="equal" class="border rounded-xl w-40 bg-amber-500 text-black">=</button>
+        <button id="clear" class="border rounded-xl w-40 bg-red-400 text-black">Cl</button>
       </div>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </html>

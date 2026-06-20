@@ -8,16 +8,15 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-black: #000;
-    --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
+    --container-sm: 24rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --radius-xl: 0.75rem;
@@ -178,35 +177,14 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
-  .h-1 {
-    height: var(--spacing);
-  }
-  .h-1\/5 {
-    height: calc(1 / 5 * 100%);
-  }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
-  .h-2\/3 {
-    height: calc(2 / 3 * 100%);
+  .h-100 {
+    height: calc(var(--spacing) * 100);
   }
   .h-screen {
     height: 100vh;
-  }
-  .w-1 {
-    width: var(--spacing);
-  }
-  .w-1\/4 {
-    width: calc(1 / 4 * 100%);
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
-  }
-  .w-2\/3 {
-    width: calc(2 / 3 * 100%);
   }
   .w-15 {
     width: calc(var(--spacing) * 15);
@@ -214,17 +192,17 @@
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-75 {
+    width: calc(var(--spacing) * 75);
+  }
+  .w-85 {
+    width: calc(var(--spacing) * 85);
+  }
   .w-full {
     width: 100%;
-  }
-  .w-xs {
-    width: var(--container-xs);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -254,9 +232,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
-  }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
   }
@@ -285,19 +260,9 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-white {
-    color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-0 {
     outline-style: var(--tw-outline-style);

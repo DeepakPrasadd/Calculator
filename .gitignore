@@ -1,1 +1,23 @@
-node_modules
+# Node.js dependencies
+node_modules/
+
+# Build output (dist, build, coverage, etc.)
+dist/
+build/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Prettier/ESLint cache
+.eslintcache
